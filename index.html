@@ -6,95 +6,101 @@
         <link href="styles.css" rel="stylesheet">
     </head>
     <body>
-        <header><!--SHE HAS SOMETHING DIFFERENT IN THE EXAMPLE VIDEOS FOR THE HEADER-->
-            <div id="muzakgrid">
-                <h1 id="muzak1">MuzakMaker</h1>            
-                <nav id="muzak2">
-                    <ul>
-                        <li><a href="#trending">Trending<br>Songs</a></li>
-                        <li><a href="#your">Your<br>Playlists</a></li>
-                        <li><a href="#curated">Curated<br>Playlists</a></li>
-                        <li><img src="images/images/duke-silver.png" alt="Duke Silver"></li>
-                    </ul>
-                </nav>        
-            </div>
-            <div id="smooth">
-                <h2>Smooth Jazz</h2>
-                <p>This station is dedicated to the soothing sounds of smooth jazz. This genre of commercially oriented crossover jazz became dominant in the 1980s and early 1990s.</p>
-            </div>    
-        </header>  
+        <header>            
+            <h1>Smooth Jazz</h1>
+            <p>This station is dedicated to the soothing sounds of smooth jazz. This genre of commercially oriented crossover jazz became dominant in the 1980s and early 1990s.</p>
+        </header>         
+        <nav>
+            <h2>Main Navigation</h2>
+            <input type="checkbox" id="dropdown">
+            <label for="dropdown"><span></span></label>
+            <ul>
+                <li><a href="#home">MuzakMaker</a></li>
+                <li><a href="#trending">Trending<br>Songs</a></li>
+                <li><a href="#your">Your<br>Playlists</a></li>
+                <li><a href="#curated">Curated<br>Playlists</a></li>
+                <li><img src="images/images/duke-silver.png" alt="Duke Silver"></li>
+            </ul>
+        </nav>     
         <main>
             <section>
-                <h3 id="trending">Trending Songs</h3><!--TRENDING SONGS-->
-                <div>
-                    <h4>Aloma</h4>
-                    <dl>
-                        <dt>Artist</dt>
-                        <dd>Cali</dd>
-                    </dl>
+                <h2 id="trending">Trending Songs</h2><!--TRENDING SONGS-->
+                <div class="scroll">
+                    <section>
+                        <div>
+                            <h3>Aloma</h3>
+                            <dl>
+                                <dt>Artist</dt>
+                                <dd>Cali</dd>
+                            </dl>
+                        </div>
+                        <img src="images/images/aloma-cover.png" alt="Aloma album cover">
+                        <audio controls autoplay src="audio/audio/aloma.mp3">                    
+                            Your browser does not support the
+                            <code>audio</code> element.
+                        </audio>
+                    </section>
+                    <section>
+                        <div>
+                            <h3>My Road</h3>
+                            <dl>
+                                <dt>Artist</dt>
+                                <dd>Nesterouk</dd>
+                            </dl>
+                        </div>
+                        <img src="images/images/my-road-cover.png" alt="My Road album cover">
+                        <audio controls autoplay src="audio/audio/my-road.mp3">                  
+                            Your browser does not support the
+                            <code>audio</code> element.
+                        </audio>
+                    </section>
+                    <section>
+                        <div>
+                            <h3>Papaya</h3>
+                            <dl>
+                                <dt>Artist</dt>
+                                <dd>Dredstudio</dd>
+                            </dl>
+                        </div>
+                        <img src="images/images/papaya-cover.png" alt="Papaya album cover">
+                        <audio controls autoplay src="audio/audio/papaya.mp3">                  
+                            Your browser does not support the
+                            <code>audio</code> element.
+                        </audio>
+                    </section>
+                    <section>
+                        <div>
+                            <h3>Smoothies</h3>
+                            <dl>
+                                <dt>Artist</dt>
+                                <dd>Black Rhomb</dd>
+                            </dl>
+                        </div>
+                        <img src="images/images/smoothies-cover.png" alt="Smoothies album cover">
+                        <audio controls autoplay src="audio/audio/smoothies.mp3">               
+                            Your browser does not support the
+                            <code>audio</code> element.
+                        </audio>
+                    </section>
+                    <section>
+                        <div>
+                            <h3>Successful Performance</h3>
+                            <dl>
+                                <dt>Artist</dt>
+                                <dd>Ricky Bombinob</dd>
+                            </dl>
+                        </div>
+                        <img src="images/images/successful-performance-cover.png" alt="Successful Performance album cover">
+                        <audio controls autoplay src="audio/audio/successful-performance.mp3">               
+                            Your browser does not support the
+                            <code>audio</code> element.
+                        </audio>
+                        <button>More trending</button>  <!--IS THIS THE SLIDER??-->
+                    </section>          
                 </div>
-                <img src="images/images/aloma-cover.png" alt="Aloma album cover">
-                <audio controls autoplay src="audio/audio/aloma.mp3">                    
-                  Your browser does not support the audio element.
-                </audio>
             </section>
             <section>
-                <div>
-                    <h4>My Road</h4>
-                    <dl>
-                        <dt>Artist</dt>
-                        <dd>Nesterouk</dd>
-                    </dl>
-                </div>
-                <img src="images/images/my-road-cover.png" alt="My Road album cover">
-                <audio controls autoplay src="audio/audio/my-road.mp3">                  
-                    Your browser does not support the audio element.
-                </audio>
-            </section>
-            <section>
-                <div>
-                    <h4>Papaya</h4>
-                    <dl>
-                        <dt>Artist</dt>
-                        <dd>Dredstudio</dd>
-                    </dl>
-                </div>
-                <img src="images/images/papaya-cover.png" alt="Papaya album cover">
-                <audio controls autoplay src="audio/audio/papaya.mp3">                  
-                    Your browser does not support the audio element.
-                </audio>
-            </section>
-            <section>
-                <div>
-                    <h4>Smoothies</h4>
-                    <dl>
-                        <dt>Artist</dt>
-                        <dd>Black Rhomb</dd>
-                    </dl>
-                </div>
-                <img src="images/images/smoothies-cover.png" alt="Smoothies album cover">
-                <audio controls autoplay src="audio/audio/smoothies.mp3">               
-                    Your browser does not support the audio element.
-                </audio>
-            </section>
-            <section>
-                <div>
-                    <h4>Successful Performance</h4>
-                    <dl>
-                        <dt>Artist</dt>
-                        <dd>Ricky Bombinob</dd>
-                    </dl>
-                </div>
-                <img src="images/images/successful-performance-cover.png" alt="Successful Performance album cover">
-                <audio controls autoplay src="audio/audio/successful-performance.mp3">               
-                    Your browser does not support the audio element.
-                </audio>
-            </section>
-            <div>
-                <button>More trending</button>  <!--IS THIS THE SLIDER??-->
-            </div>
-            <section>
-                <h3 id="your">Your Playlists</h3><!--YOUR PLAYLISTS-->                
+                <h2 id="your">Your Playlists</h2><!--YOUR PLAYLISTS-->                
                 <div>
                     <img src="images/images/best-of-2020-cover.png" alt="Best of 2020 album cover">             
                     <dl>
@@ -135,7 +141,7 @@
                 </div>
             </section>
             <section><!--CURATED PLAYLISTS-->
-                <h3 id="curated">Curated Playlists</h3>
+                <h2 id="curated">Curated Playlists</h2>
                 <div>
                     <img src="images/images/boozy-brunch-cover.png" alt="Boozey Brunch album cover">             
                     <dl>

@@ -3,53 +3,189 @@ html {
     background-color: #020659;
 }
 
+/*MENU*/
+
+ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+@media screen and (min-width:834px) {
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    label span, input {
+        display: none;
+    }
+}
+
+/*AUDIO TO CUSTOMIZE*/
+audio::-webkit-media-controls-mute-button {
+
+}
+audio::-webkit-media-controls-play-button {
+
+}
+audio::-webkit-media-controls-enclosure {
+
+}
+
+/*SCROLL TO CUSTOMIZE*/
+#trending ::-webkit-scrollbar {
+
+}
+#trending ::-webkit-scrollbar-track {
+
+}
+#trending ::-webkit-scrollbar-thumb {
+
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+
+}
+
 body {
     background-color: white;
-    min-width: 375px;    
+    margin: 0 auto;
+    max-width: 375px;  /*NOT SURE ABOUT THIS*/
+    font-family: Raleway, Optima, sans-serif;  
+}
+
+header {
+    position: relative;
+    padding-bottom: 150px;
+    top: 120px;
+}
+
+h2, h3 {
+    color: #590242;
+}
+
+nav {
+    width: 375px;
+    background-color: #030A8C; 
+    position: absolute;   
+    top: 0;  
+         
+}
+
+
+nav ul {
+    text-align: center;
+}
+
+nav h2 {
+    visibility: hidden;    
+}
+
+[href="#home"] {
+    color: white;
+    font-variant: small-caps;
 }
 
 nav li {
     list-style: none;
-    display: inline-block;
-    padding-left: 40px;
-    padding-right: 40px;     
-}   
-
-nav a {
-    text-decoration: none;
     color: white;
+    text-align: center;    
 }
 
-#muzakgrid {
-    display: grid; 
-    grid-template-columns: 1fr, 2fr;
-    grid-template-rows: 3fr;
-    background-color: #030A8C;
-    color: white;
+a {
+    display: block;
+    text-decoration: none;    
 }
 
-#muzak1 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-
-#muzak2 {
-    grid-column-start: 2;
-    grid-column-end: 2;
-}
-
-#smooth {
+.scroll {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    background-image: linear-gradient(to right, #2104D9, #020873, #020659);
-    color: white;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
-/*FOR LARGER SCREENS*/
-@media and (min-width:834px) {
-
+.scroll section {
+    margin: 10px;
+    position: relative;
 }
 
+.scroll div {
+    position: absolute;
+    top: 220px;
+    background-color: rgba(255,255,255,.75);
+    padding: 5px;
+    height: 85px;
+    width: 350px;
+}
 
+.scroll dt {
+    color:#590242;
+}
 
+.scroll dd {
+    color:#590242;
+}
+/*THERE ARE MORE STYLES IN THE EXAMPLE FOR THE BUTTON*/
 
