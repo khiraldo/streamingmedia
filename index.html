@@ -7,21 +7,25 @@
     </head>
     <body>
         <header><!--SHE HAS SOMETHING DIFFERENT IN THE EXAMPLE VIDEOS FOR THE HEADER-->
-            <h1>MuzakMaker</h1>
-            <h2>Smooth Jazz</h2>
-            <p>This station is dedicated to the soothing sounds of smooth jazz. This genre of commercially oriented crossover jazz became dominant in the 1980s and early 1990s.</p>
-            <nav>
-                <ul>
-                    <li>Trending Songs</li>
-                    <li>Your Playlists</li>
-                    <li>Curated Playlists</li>
-                    <li><img src="images/images/duke-silver.png" alt="Duke Silver"></li>
-                </ul>
-            </nav>            
+            <div id="muzakgrid">
+                <h1 id="muzak1">MuzakMaker</h1>            
+                <nav id="muzak2">
+                    <ul>
+                        <li><a href="#trending">Trending<br>Songs</a></li>
+                        <li><a href="#your">Your<br>Playlists</a></li>
+                        <li><a href="#curated">Curated<br>Playlists</a></li>
+                        <li><img src="images/images/duke-silver.png" alt="Duke Silver"></li>
+                    </ul>
+                </nav>        
+            </div>
+            <div id="smooth">
+                <h2>Smooth Jazz</h2>
+                <p>This station is dedicated to the soothing sounds of smooth jazz. This genre of commercially oriented crossover jazz became dominant in the 1980s and early 1990s.</p>
+            </div>    
         </header>  
         <main>
             <section>
-                <h3>Trending Songs</h3><!--TRENDING SONGS-->
+                <h3 id="trending">Trending Songs</h3><!--TRENDING SONGS-->
                 <div>
                     <h4>Aloma</h4>
                     <dl>
@@ -90,7 +94,7 @@
                 <button>More trending</button>  <!--IS THIS THE SLIDER??-->
             </div>
             <section>
-                <h3>Your Playlists</h3><!--YOUR PLAYLISTS-->                
+                <h3 id="your">Your Playlists</h3><!--YOUR PLAYLISTS-->                
                 <div>
                     <img src="images/images/best-of-2020-cover.png" alt="Best of 2020 album cover">             
                     <dl>
@@ -131,7 +135,7 @@
                 </div>
             </section>
             <section><!--CURATED PLAYLISTS-->
-                <h3>Curated Playlists</h3>
+                <h3 id="curated">Curated Playlists</h3>
                 <div>
                     <img src="images/images/boozy-brunch-cover.png" alt="Boozey Brunch album cover">             
                     <dl>
