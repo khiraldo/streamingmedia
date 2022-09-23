@@ -112,14 +112,24 @@ audio::-webkit-media-controls-enclosure {
 body {
     background-color: white;
     margin: 0 auto;
-    max-width: 375px;  /*NOT SURE ABOUT THIS*/
-    font-family: Raleway, Optima, sans-serif;  
+    min-width: 375px;
+    font-family: Raleway, Optima, sans-serif;        
 }
+
+@media and (min-width: 375px) {
+  
+} /*the hamburger comes up but the nav stays small when the tab is large*/
+
+@media screen and (min-width: 834px) {
+  
+} 
+/*would this be for the larger screen version?*/
 
 header {
     position: relative;
     padding-bottom: 150px;
     top: 120px;
+    
 }
 
 h2, h3 {
