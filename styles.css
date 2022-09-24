@@ -21,12 +21,16 @@ h2, h3 {
     color: #590242;
 }
 
+h3 {
+    text-transform: uppercase;
+}
+
 nav {
     width: 375px;
     background-color: #030A8C; 
     position: absolute;   
-    top: 0;  
-         
+    top: 0;
+    z-index: 1;              
 }
 
 
@@ -38,21 +42,128 @@ nav h2 {
     visibility: hidden;    
 }
 
-[href="#home"] {
-    color: white;
-    font-variant: small-caps;
-}
 
 nav li {
     list-style: none;
     color: white;
-    text-align: center;    
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+[href="#home"] {
+    color: white;
+    font-variant: small-caps;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    padding-top: 70px;    
 }
 
 a {
     display: block;
-    text-decoration: none;    
+    text-decoration: none; 
+    padding: 25px;
+    color:#ffffff;   
 }
+
+a:hover {
+    background-color: #590242;
+}
+
+/*MENU*/
+
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    background-color:  #2104D9;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+label span:before {
+    top: 5px;
+}
+
+label span:after {
+    top: -5px;
+}
+
+input {
+    display: none;
+}
+
+input:checked ~ ul {
+    max-height: 500px;
+}
+
+input:checked ~ label span {
+    background: transparent;
+}
+
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+/*When the screen expands to a min of 834, then this happens */
+
+@media screen and (min-width:834px) {
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    label span, input {
+        display: none;
+    }
+
+    body {
+        min-width: 834px;
+    }
+
+    nav {
+        min-width: 834px;
+    }
+}
+
 
 .scroll {
     display: grid;
@@ -75,86 +186,90 @@ a {
     width: 350px;
 }
 
+dl {
+    display: flex;
+}
+
 .scroll dt {
     color:#590242;
+    font-style: italic;    
 }
 
 .scroll dd {
-    color:#590242;
+    color:#590242;    
 }
-/*THERE ARE MORE STYLES IN THE EXAMPLE FOR THE BUTTON*/
 
-
-
-/*MENU
-
-ul {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-}
-label {
-    cursor: pointer;
-    display: inline-block;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-}
-label span {
-    background-color: #ffffff;
+#moretrend {
     display: block;
-    height: 2px;
+    background-color: #590242;
+    color:#ffffff;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 140px;
     position: relative;
-    transition: background-color .2s ease-out;
-    width: 18px;
-}
-label span:before, label span:after {
-    background: #ffffff;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-label span:before {
-    top: 5px;
-}
-label span:after {
-    top: -5px;
-}
-input {
-    display: none;
-}
-input:checked ~ ul {
-    max-height: 500px;
-}
-input:checked ~ label span {
-    background: transparent;
-}
-input:checked ~ label span:before {
-    transform: rotate(-45deg);
-}
-input:checked ~ label span:after {
-    transform: rotate(45deg);
-}
-input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
-    top: 0;
+    left: 15px;
+    
 }
 
 @media screen and (min-width:834px) {
-    ul {
-        overflow: visible;
-        position: absolute;
-        top: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-    label span, input {
-        display: none;
-    }
+  #moretrend {
+    display: block;
+    background-color: #590242;
+    color:#ffffff;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 140px;
+    position: relative;
+    left: 682px;
+
+  }
 }
-*/
+
+/*SCROLL*/
+#trending ::-webkit-scrollbar {
+    width: 15px;
+
+}
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+
+}
+#trending ::-webkit-scrollbar-thumb {
+    background-color: #590242;
+    border-radius: 5px;
+
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+    background-color: #020659;
+
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width: 15px;
+
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+    box-shadow: inset 0 0 15px #020659;
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background-color: #020659;
+    border-radius: 5px;
+
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background-color: #ffffff;
+
+}
+
+audio {
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+
 
 
 /*AUDIO TO CUSTOMIZE
@@ -170,44 +285,8 @@ audio::-webkit-media-controls-enclosure {
 */
 
 
-/*SCROLL TO CUSTOMIZE
-#trending ::-webkit-scrollbar {
-
-}
-#trending ::-webkit-scrollbar-track {
-
-}
-#trending ::-webkit-scrollbar-thumb {
-
-}
-#trending ::-webkit-scrollbar-thumb:hover {
-
-}
-#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
-
-}
-#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
-
-}
-#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
-
-}
-#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
-
-}
-*/
 
 
-
-/*THIS IS WHAT I HAD HERE:
-@media and (min-width: 375px) {
-  
-} the hamburger comes up but the nav stays small when the tab is large
-
-@media screen and (min-width: 834px) {
-  
-} 
-/*would this be for the larger screen version?*/
 
 
 
