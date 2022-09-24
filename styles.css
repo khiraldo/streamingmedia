@@ -164,6 +164,14 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     }
 }
 
+h1, p {
+    padding-left: 10px;
+}
+
+#trending {
+    padding-left: 10px;
+}
+
 
 .scroll {
     display: grid;
@@ -186,7 +194,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     width: 350px;
 }
 
-dl {
+.scroll dl {
     display: flex;
 }
 
@@ -204,7 +212,7 @@ dl {
     background-color: #590242;
     color:#ffffff;
     padding: 5px;
-    margin-bottom: 20px;
+    margin: 20px;
     border-radius: 5px;
     text-align: center;
     width: 140px;
@@ -271,18 +279,117 @@ audio {
 }
 
 
-
-/*AUDIO TO CUSTOMIZE
+/*AUDIO*/
 audio::-webkit-media-controls-mute-button {
+    background-color: #ffffff;
+    border-radius: 50%;
 
 }
 audio::-webkit-media-controls-play-button {
-
+    background-color: #ffffff;
+    border-radius: 50%;
 }
 audio::-webkit-media-controls-enclosure {
+    background-color: rgba(255,255,255,.5);
+}
+
+#your {
+    padding-left: 10px;
+}
+
+.your-play {
+    display: flex;    
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-left: 8px;  
+    background-color: #0D8DFB;  
+}
+
+.flex-items {
+    position: relative;
+    margin: 20px;
+    color: #ffffff;
+}
+
+.your-play dl {
+    text-align: center;
+}
+
+.your-play dt {
+    font-weight: bold;
+}
+
+#all-your {
+    display: block;
+    background-color: #590242;
+    color:#ffffff;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 140px;
+    position: relative;
+    left: 15px;
+}
+
+#curated {
+    padding-left: 10px;
+}
+
+.curated-play {
+    display: flex;    
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-left: 8px;  
+    background-color:  #020873;
 
 }
-*/
+
+.curated-play dl {
+    text-align: center;
+}
+
+.curated-play dt {
+    font-weight: bold;
+}
+
+.flex-items2 {
+    position: relative;
+    margin: 20px;
+    color: #ffffff;
+}
+
+#more-cure {
+    display: block;
+    background-color: #590242;
+    color:#ffffff;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 140px;
+    position: relative;
+    left: 15px;
+}
+
+small {
+    color: #590242;    
+}
+
+
+/*Add a media query to make the playlists look different when the screen gets larger, example below
+@media (min-width: 834px) {
+    .your-play {
+      flex-direction: column;
+    }
+  }
+  */
+
+
+
+
 
 
 
