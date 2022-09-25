@@ -312,6 +312,17 @@ audio::-webkit-media-controls-enclosure {
     color: #ffffff;
 }
 
+@media screen and (min-width:834px) {
+    .your-play {
+        display: inline-flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding-left: 8px;  
+        background-color: #0D8DFB; 
+    }
+  }
+
 .your-play dl {
     text-align: center;
 }
@@ -338,7 +349,7 @@ audio::-webkit-media-controls-enclosure {
 }
 
 .curated-play {
-    display: flex;    
+    display: flex; 
     flex-direction: row;
     overflow-x: auto;
     overflow-y: hidden;
@@ -378,14 +389,19 @@ small {
     color: #590242;    
 }
 
-
-/*Add a media query to make the playlists look different when the screen gets larger, example below
-@media (min-width: 834px) {
-    .your-play {
-      flex-direction: column;
+@media screen and (min-width:834px) {
+    .curated-play {
+        display: inline-flex;   
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding-left: 8px;  
+        background-color: #020873;
     }
   }
-  */
+
+
+/*I NEED TO DO SOMETHING WITH THE FLEXBOX FOR YOUR-PLAY AND CURE-PLAY CLASSES, SO THEY CAN ALIGN VERTIAL. OVERFLOW: SCROLL WORKED*/
 
 
 
